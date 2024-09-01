@@ -89,6 +89,9 @@ def main():
             time.sleep(1)
             continue
         
+        # Flip the frame horizontally, so it is not inverted 
+        frame = cv2.flip(frame, 1)
+
         # create a mask for the blue colour 
         mask = createMask(frame, lowerBlue, upperBlue)
         # apply the cloak effect 
